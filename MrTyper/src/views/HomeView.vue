@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, watch, toRaw } from 'vue'
 import { Plus, Trash2, Lock, Unlock, FileText, Pencil, Check, X } from 'lucide-vue-next'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -168,6 +168,17 @@ const deleteText = async (id: string) => {
     console.error('Failed to delete text:', error)
   }
 }
+
+// redirect to game page test
+function enterGamePage(){
+  const rawSelectedChapter = toRaw(selectedChapter.value);
+  const rawTexts = texts.value.map(item => toRaw(item));
+
+  localStorage.setItem('mrtyper_chapter_text_data', JSON.stringify({
+    'chapter': rawSelectedChapter,
+    'text': JSON.stringify(rawTexts)
+  }))
+}
 </script>
 
 <template>
@@ -269,7 +280,7 @@ const deleteText = async (id: string) => {
                     <Pencil class="w-3.5 h-3.5" />
                   </Button>
                 </div>
-                <Button class="w-40 h-10 text-xl">
+                <Button class="w-40 h-10 text-xl" @click="enterGamePage">
                   Play
                 </Button>
               </div>
