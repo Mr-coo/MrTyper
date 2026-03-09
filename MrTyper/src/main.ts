@@ -11,4 +11,6 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 
+document.documentElement.classList.add("dark")
+
 app.mount('#app')
