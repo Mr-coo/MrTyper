@@ -1,64 +1,32 @@
+<script lang="ts">
+export const description = "A two column login page with a cover image."
+</script>
+
 <script setup lang="ts">
-import { Button } from '@/components/ui/button'
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
+import { GalleryVerticalEnd } from "lucide-vue-next"
+import LoginForm from "@/components/new-york-v4/blocks/login-02/components/LoginForm.vue"
+import TypeAnimation from "@/components/TypeAnimation.vue";
 </script>
 
 <template>
-  <div class="flex justify-between items-center w-screen">
-    <h1>Mr.Typer</h1>
-    <Card class="w-[50vw] max-w-sm">
-      <CardHeader>
-        <CardTitle>Login to your account</CardTitle>
-        <CardDescription>
-          Enter your email below to login to your account
-        </CardDescription>
-        <CardAction>
-          <Button variant="link">
-            Sign Up
-          </Button>
-        </CardAction>
-      </CardHeader>
-      <CardContent>
-        <form>
-          <div class="grid w-full items-center gap-4">
-            <div class="flex flex-col space-y-1.5">
-              <Label for="email">Email</Label>
-              <Input id="email" type="email" placeholder="m@example.com" />
-            </div>
-            <div class="flex flex-col space-y-1.5">
-              <div class="flex items-center">
-                <Label for="password">Password</Label>
-                <a
-                  href="#"
-                  class="ml-auto inline-block text-sm underline"
-                >
-                  Forgot your password?
-                </a>
-              </div>
-              <Input id="password" type="password" />
-            </div>
+  <div class="grid min-h-svh lg:grid-cols-2">
+    <div class="flex flex-col gap-4 p-6 md:p-10">
+      <div class="flex justify-center gap-2 md:justify-start">
+        <a href="#" class="flex items-center gap-2 font-medium">
+          <div class="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
+            <GalleryVerticalEnd class="size-4" />
           </div>
-        </form>
-      </CardContent>
-      <CardFooter class="flex flex-col gap-2">
-        <Button class="w-full">
-          Login
-        </Button>
-        <Button variant="outline" class="w-full">
-          Login with Google
-        </Button>
-      </CardFooter>
-    </Card>
+          MrTyper.
+        </a>
+      </div>
+      <div class="flex flex-1 items-center justify-center">
+        <div class="w-full max-w-xs">
+          <LoginForm />
+        </div>
+      </div>
+    </div>
+    <div class="bg-muted relative flex items-center justify-center w-full h-full">
+      <TypeAnimation/>
+    </div>
   </div>
 </template>
-  
