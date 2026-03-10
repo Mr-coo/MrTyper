@@ -1,6 +1,7 @@
 ﻿using backend.Domain.models;
 using backend.Domain.Repositories;
 using backend.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Infrastructure.Repositories
 {
@@ -18,6 +19,12 @@ namespace backend.Infrastructure.Repositories
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
             return user;
+        }
+
+        public async Task<User?> GetByUsernameAsync(string username)
+        {
+            return await _context.Users
+                .FirstOrDefaultAsync(u => u.username == username);
         }
     }
 }

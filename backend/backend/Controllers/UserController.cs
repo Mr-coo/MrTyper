@@ -16,13 +16,24 @@ namespace backend.Controllers
             _userService = service;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateCustomer(
-            [FromBody] CreateUserRequestDto request
-        )
+        [HttpPost("register")]
+        public async Task<IActionResult> register(CreateUserRequestDto request)
         {
             var result = await _userService.addUser(request);
             return Ok(result);
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> login(LoginRequestDto request)
+        {
+            var user = await _userService.login(request);
+
+            return Ok(new
+            {
+                user.id,
+                user.username,
+                user.name
+            });
         }
     }
 }
