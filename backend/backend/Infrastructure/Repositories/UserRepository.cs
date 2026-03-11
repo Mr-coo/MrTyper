@@ -21,7 +21,13 @@ namespace backend.Infrastructure.Repositories
             return user;
         }
 
-        public async Task<User?> GetByUsernameAsync(string username)
+        public async Task<User?> getByGithubId(string githubId)
+        {
+            return await _context.Users
+                .FirstOrDefaultAsync(u => u.githubId == githubId);
+        }
+
+        public async Task<User?> getByUsernameAsync(string username)
         {
             return await _context.Users
                 .FirstOrDefaultAsync(u => u.username == username);

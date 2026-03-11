@@ -113,3 +113,4 @@ C:\Users\ASUS\Documents\Personal-Project\MrTyper-Fullstack\backend\backend\bin\D
 C:\Users\ASUS\Documents\Personal-Project\MrTyper-Fullstack\backend\backend\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\ASUS\Documents\Personal-Project\MrTyper-Fullstack\backend\backend\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\ASUS\Documents\Personal-Project\MrTyper-Fullstack\backend\backend\obj\Debug\net8.0\backend.sourcelink.json
+C:\Users\ASUS\Documents\Personal-Project\MrTyper-Fullstack\backend\backend\bin\Debug\net8.0\AspNet.Security.OAuth.GitHub.dll

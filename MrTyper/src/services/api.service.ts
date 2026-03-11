@@ -10,8 +10,7 @@ const api = axios.create({
 
 api.interceptors.response.use(
   (response) => {
-    console.log(response.data)
-    toast.info(response.data)
+    toast.info(response.data.message)
     return response
   },
   (error) => {

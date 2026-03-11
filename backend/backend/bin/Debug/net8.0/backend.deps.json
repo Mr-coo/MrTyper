@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "backend/1.0.0": {
         "dependencies": {
+          "AspNet.Security.OAuth.GitHub": "8.3.0",
           "Microsoft.EntityFrameworkCore": "8.0.24",
           "Microsoft.EntityFrameworkCore.Design": "8.0.24",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.24",
@@ -17,6 +18,14 @@
         },
         "runtime": {
           "backend.dll": {}
+        }
+      },
+      "AspNet.Security.OAuth.GitHub/8.3.0": {
+        "runtime": {
+          "lib/net8.0/AspNet.Security.OAuth.GitHub.dll": {
+            "assemblyVersion": "8.3.0.0",
+            "fileVersion": "8.300.24.55742"
+          }
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -577,6 +586,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AspNet.Security.OAuth.GitHub/8.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RdUDFVW61zP/POGLc8cYqrNKohAioIjfAt7m/2QgOPw+Urcq+3GFUcIlGFWx2HgrNLnO4F7IC4K7VCu019BUiA==",
+      "path": "aspnet.security.oauth.github/8.3.0",
+      "hashPath": "aspnet.security.oauth.github.8.3.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

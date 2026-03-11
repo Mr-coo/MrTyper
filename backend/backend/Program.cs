@@ -2,7 +2,10 @@ using backend.Application.Services;
 using backend.Domain.Repositories;
 using backend.Infrastructure.Data;
 using backend.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using AspNet.Security.OAuth.GitHub;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +31,21 @@ builder.Services.AddCors(options =>
                   .AllowAnyMethod();
         });
 });
+
+builder.Services
+    .AddAuthentication(options =>
+    {
+        options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    })
+    .AddCookie()
+    .AddGitHub(options =>
+    {
+        options.ClientId = builder.Configuration["GitHub:ClientId"];
+        options.ClientSecret = builder.Configuration["GitHub:ClientSecret"];
+        options.CallbackPath = "/signin-github";
+
+        options.Scope.Add("user:email");
+    });
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<UserService>();

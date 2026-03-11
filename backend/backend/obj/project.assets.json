@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "AspNet.Security.OAuth.GitHub/8.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/AspNet.Security.OAuth.GitHub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AspNet.Security.OAuth.GitHub.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -928,6 +944,21 @@
     }
   },
   "libraries": {
+    "AspNet.Security.OAuth.GitHub/8.3.0": {
+      "sha512": "RdUDFVW61zP/POGLc8cYqrNKohAioIjfAt7m/2QgOPw+Urcq+3GFUcIlGFWx2HgrNLnO4F7IC4K7VCu019BUiA==",
+      "type": "package",
+      "path": "aspnet.security.oauth.github/8.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "aspnet.security.oauth.github.8.3.0.nupkg.sha512",
+        "aspnet.security.oauth.github.nuspec",
+        "lib/net8.0/AspNet.Security.OAuth.GitHub.dll",
+        "lib/net8.0/AspNet.Security.OAuth.GitHub.xml"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -2664,6 +2695,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "AspNet.Security.OAuth.GitHub >= 8.3.0",
       "Microsoft.EntityFrameworkCore >= 8.0.24",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.24",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.24",
@@ -2722,6 +2754,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "AspNet.Security.OAuth.GitHub": {
+            "target": "Package",
+            "version": "[8.3.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.24, )"
