@@ -10,32 +10,46 @@ import {
   FieldSeparator,
 } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
+import { login } from "@/services/user.service";
+import { ref } from 'vue';
+
+const username = ref('');
+const password = ref('');
 
 const props = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
+
+async function handleLogin(){
+  const result = await login({
+    username: username.value,
+    password: password.value
+  })
+
+  console.log(result)
+}
 </script>
 
 <template>
-  <form :class="cn('flex flex-col gap-6', props.class)">
+  <form :class="cn('flex flex-col gap-6', props.class)" @submit.prevent="handleLogin">
     <FieldGroup>
       <div class="flex flex-col items-center gap-1 text-center">
         <h1 class="text-2xl font-bold">
           Login to your account
         </h1>
         <p class="text-muted-foreground text-sm text-balance">
-          Enter your email below to login to your account
+          Enter your username below to login to your account
         </p>
       </div>
       <Field>
-        <FieldLabel for="email">
-          Email
+        <FieldLabel for="username">
+          username
         </FieldLabel>
-        <Input id="email" type="email" placeholder="m@example.com" required />
+        <Input id="username" type="username" placeholder="John Doe" required v-model="username"/>
       </Field>
       <Field>
         <div class="flex items-center justify-between">
-          <FieldLabel for="password">
+          <FieldLabel for="password" placeholder="password" required>
             Password
           </FieldLabel>
           <a
@@ -45,7 +59,7 @@ const props = defineProps<{
             Forgot your password?
           </a>
         </div>
-        <Input id="password" type="password" required />
+        <Input id="password" type="password" required v-model="password"/>
       </Field>
       <Field>
         <Button type="submit">

@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,16 +27,8 @@
       "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\application\\dtos\\createuserrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,88 +50,24 @@
       "DocumentGroups": [
         {
           "DockedHeight": 357,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Domain\\Models\\User.cs",
-              "RelativeDocumentMoniker": "backend\\Domain\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Domain\\Models\\User.cs",
-              "RelativeToolTip": "backend\\Domain\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T12:09:39.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "backend\\Application\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Services\\UserService.cs",
-              "RelativeToolTip": "backend\\Application\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBYAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T07:05:21.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\appsettings.json",
-              "RelativeDocumentMoniker": "backend\\appsettings.json",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\appsettings.json",
-              "RelativeToolTip": "backend\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-10T06:24:45.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "backend\\Infrastructure\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "backend\\Infrastructure\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAuwBcAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T07:01:36.634Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CreateUserRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Dtos\\CreateUserRequestDto.cs",
-              "RelativeDocumentMoniker": "backend\\Application\\Dtos\\CreateUserRequestDto.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Dtos\\CreateUserRequestDto.cs",
-              "RelativeToolTip": "backend\\Application\\Dtos\\CreateUserRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T06:53:29.891Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Controllers\\UserController.cs",
-              "RelativeToolTip": "backend\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAMwBkAAAAYAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Controllers\\UserController.cs*",
+              "RelativeToolTip": "backend\\Controllers\\UserController.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAzwBsAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-10T08:32:42.833Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "20260310063026_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Infrastructure\\Migrations\\20260310063026_InitialCreate.cs",
               "RelativeDocumentMoniker": "backend\\Infrastructure\\Migrations\\20260310063026_InitialCreate.cs",
@@ -147,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Domain\\Repositories\\IUserRepository.cs",
               "RelativeDocumentMoniker": "backend\\Domain\\Repositories\\IUserRepository.cs",
@@ -155,8 +87,57 @@
               "RelativeToolTip": "backend\\Domain\\Repositories\\IUserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T08:36:49.684Z",
+              "WhenOpened": "2026-03-10T08:36:49.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "backend\\Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Services\\UserService.cs",
+              "RelativeToolTip": "backend\\Application\\Services\\UserService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAUwBcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T07:05:21.865Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\appsettings.json",
+              "RelativeDocumentMoniker": "backend\\appsettings.json",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\appsettings.json",
+              "RelativeToolTip": "backend\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-10T06:24:45.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateUserRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Dtos\\CreateUserRequestDto.cs",
+              "RelativeDocumentMoniker": "backend\\Application\\Dtos\\CreateUserRequestDto.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Dtos\\CreateUserRequestDto.cs",
+              "RelativeToolTip": "backend\\Application\\Dtos\\CreateUserRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T06:53:29.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "backend\\Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "backend\\Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAuwBcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T07:01:36.634Z"
             },
             {
               "$type": "Document",
@@ -172,19 +153,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Program.cs",
-              "RelativeDocumentMoniker": "backend\\Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Program.cs",
-              "RelativeToolTip": "backend\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwBIAAAAHAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Domain\\Models\\User.cs",
+              "RelativeDocumentMoniker": "backend\\Domain\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Domain\\Models\\User.cs",
+              "RelativeToolTip": "backend\\Domain\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T03:37:43.372Z"
+              "WhenOpened": "2026-03-10T12:09:39.159Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "backend\\WeatherForecast.cs",

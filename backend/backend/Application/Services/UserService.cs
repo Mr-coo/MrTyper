@@ -21,7 +21,7 @@ namespace backend.Application.Services
             var existing = await _userRepository.GetByUsernameAsync(request.username);
 
             if (existing != null)
-                throw new Exception("Email already registered");
+                throw new Exception("Username already registered");
 
             User user = new User(request.name, request.username, "");
             string hashed = _passwordHasher.HashPassword(user, request.password);
@@ -37,7 +37,7 @@ namespace backend.Application.Services
             var user = await _userRepository.GetByUsernameAsync(request.username);
 
             if (user == null)
-                throw new Exception("Invalid credentials");
+                throw new UnauthorizedAccessException("Invalid credentials");
 
             var result = _passwordHasher.VerifyHashedPassword(
                 user,
@@ -46,7 +46,7 @@ namespace backend.Application.Services
             );
 
             if (result == PasswordVerificationResult.Failed)
-                throw new Exception("Invalid credentials");
+                throw new UnauthorizedAccessException("Invalid credentials");
 
             return user;
         }

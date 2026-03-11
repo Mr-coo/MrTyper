@@ -19,21 +19,33 @@ namespace backend.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> register(CreateUserRequestDto request)
         {
-            var result = await _userService.addUser(request);
-            return Ok(result);
+            try
+            {
+                var result = await _userService.addUser(request);
+                return Ok(result);
+            } catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> login(LoginRequestDto request)
         {
-            var user = await _userService.login(request);
-
-            return Ok(new
+            try
             {
-                user.id,
-                user.username,
-                user.name
-            });
+                var user = await _userService.login(request);
+
+                return Ok(new
+                {
+                    user.id,
+                    user.username,
+                    user.name
+                });
+            } catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
     }
 }
