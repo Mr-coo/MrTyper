@@ -1,5 +1,6 @@
 ﻿using backend.Application.Dtos;
 using backend.Domain.models;
+using backend.Domain.Models;
 using backend.Domain.Repositories;
 using Microsoft.AspNetCore.Identity;
 
@@ -9,11 +10,13 @@ namespace backend.Application.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly PasswordHasher<User> _passwordHasher;
+        private readonly JwtService _jwtService;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, JwtService jwtService)
         {
             _userRepository = userRepository;
             _passwordHasher = new PasswordHasher<User>();
+            _jwtService = jwtService;
         }
 
         public async Task<User> addUser(CreateUserRequestDto request)
@@ -47,7 +50,7 @@ namespace backend.Application.Services
             return await _userRepository.addUser(newUser);
         }
 
-        public async Task<User> login(LoginRequestDto request)
+        public async Task<LoginResponseDto> login(LoginRequestDto request)
         {
             var user = await _userRepository.getByUsernameAsync(request.username);
 
@@ -63,30 +66,57 @@ namespace backend.Application.Services
             if (result == PasswordVerificationResult.Failed)
                 throw new UnauthorizedAccessException("Invalid credentials");
 
-            return user;
-        }
+            var accessToken = _jwtService.GenerateAccessToken(user);
+            var refreshToken = _jwtService.GenerateRefreshToken();
 
-        public async Task<User> addOrLoginWithGithub(string githubId, string githubUsername)
-        {
-            User user = await _userRepository.getByGithubId(githubId);
-
-            if (user != null) return user;
-
-            while (true)
+            var refreshTokenEntity = new RefreshToken
             {
-                var temp = await _userRepository.getByUsernameAsync(githubUsername);
-
-                if (temp == null) break;
-
-                githubUsername = githubUsername + "_" + new Random().Next(1000);
-            }
-
-            User newUser = new User(githubUsername, githubUsername, "")
-            {
-                githubId = githubId,
+                Token = refreshToken,
+                UserId = user.id,
+                Expires = DateTime.UtcNow.AddDays(7)
             };
 
-            return await _userRepository.addUser(newUser);
+
+            await _userRepository.storeRefreshToken(refreshTokenEntity);
+
+            return new LoginResponseDto(accessToken, refreshToken);
+        }
+
+        public async Task<LoginResponseDto> addOrLoginWithGithub(string githubId, string githubUsername)
+        {
+            User? user = await _userRepository.getByGithubId(githubId);
+
+            if (user == null)
+            {
+                while (true)
+                {
+                    var temp = await _userRepository.getByUsernameAsync(githubUsername);
+
+                    if (temp == null) break;
+
+                    githubUsername = githubUsername + "_" + new Random().Next(1000);
+                }
+
+                user = new User(githubUsername, githubUsername, "")
+                {
+                    githubId = githubId,
+                };
+            }
+
+            var accessToken = _jwtService.GenerateAccessToken(user);
+            var refreshToken = _jwtService.GenerateRefreshToken();
+
+            var refreshTokenEntity = new RefreshToken
+            {
+                Token = refreshToken,
+                UserId = user.id,
+                Expires = DateTime.UtcNow.AddDays(7)
+            };
+
+
+            await _userRepository.storeRefreshToken(refreshTokenEntity);
+
+            return new LoginResponseDto(accessToken, refreshToken);
         }
     }
 }

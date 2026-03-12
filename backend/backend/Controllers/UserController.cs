@@ -1,6 +1,7 @@
 ﻿using System.Security.Claims;
 using backend.Application.Dtos;
 using backend.Application.Services;
+using backend.Domain.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -40,15 +41,11 @@ namespace backend.Controllers
         {
             try
             {
-                var user = await _userService.login(request);
+                var result = await _userService.login(request);
 
                 return Ok(new
                 {
-                    result = new {
-                        user.id,
-                        user.username,
-                        user.name
-                    },
+                    result = result,
                     message = "Login success"
                 });
             } catch (Exception ex)
@@ -81,7 +78,9 @@ namespace backend.Controllers
 
             var createResult = await _userService.addOrLoginWithGithub(githubId, username);
 
-            return Redirect("http://localhost:5173");
+            return Redirect(
+                $"http://localhost:5173/oauth-success?accessToken={createResult.accessToken}&refreshToken={createResult.refreshToken}"
+            );
         }
     }
 }

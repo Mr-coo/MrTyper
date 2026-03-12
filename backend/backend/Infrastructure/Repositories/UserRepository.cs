@@ -1,4 +1,5 @@
 ﻿using backend.Domain.models;
+using backend.Domain.Models;
 using backend.Domain.Repositories;
 using backend.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +32,12 @@ namespace backend.Infrastructure.Repositories
         {
             return await _context.Users
                 .FirstOrDefaultAsync(u => u.username == username);
+        }
+
+        public async Task storeRefreshToken(RefreshToken refreshToken)
+        {
+            await _context.RefreshTokens.AddAsync(refreshToken);
+            await _context.SaveChangesAsync();
         }
     }
 }
