@@ -24,12 +24,7 @@ namespace backend.Controllers
         {
             try
             {
-                var result = await _userService.addUser(request);
-                return Ok(new
-                {
-                    result,
-                    message = "Account created"
-                });
+                return Ok(await _userService.addUser(request));
             } catch (Exception ex)
             {
                 return BadRequest(new { message = ex.Message });
@@ -41,13 +36,7 @@ namespace backend.Controllers
         {
             try
             {
-                var result = await _userService.login(request);
-
-                return Ok(new
-                {
-                    result = result,
-                    message = "Login success"
-                });
+                return Ok(await _userService.login(request));
             } catch (Exception ex)
             {
                 return BadRequest(new { message = ex.Message });
@@ -79,7 +68,7 @@ namespace backend.Controllers
             var createResult = await _userService.addOrLoginWithGithub(githubId, username);
 
             return Redirect(
-                $"http://localhost:5173/oauth-success?accessToken={createResult.accessToken}&refreshToken={createResult.refreshToken}"
+                $"http://localhost:5173/oauth-success?accessToken={createResult.accessToken}&refreshToken={createResult.refreshToken}&message={createResult.message}"
             );
         }
     }

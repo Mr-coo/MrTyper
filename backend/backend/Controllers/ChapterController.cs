@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+﻿using backend.Application.Dtos;
+using backend.Application.Services;
+using backend.Domain.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace backend.Controllers
 {
@@ -8,36 +11,117 @@ namespace backend.Controllers
     [ApiController]
     public class ChapterController : ControllerBase
     {
-        // GET: api/<ChapterController>
+        private readonly ChapterService _chapterService;
+
+        public ChapterController(ChapterService chapterService)
+        {
+            _chapterService = chapterService;
+        }
+
+        // Anyone can view chapters
         [HttpGet]
-        public IEnumerable<string> Get()
+        [AllowAnonymous]
+        public async Task<IActionResult> Get()
         {
-            return new string[] { "value1", "value2" };
+            try
+            {
+                Guid? userId = null;
+
+                var claim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+                if (!string.IsNullOrEmpty(claim))
+                    userId = Guid.Parse(claim);
+
+                var chapters = await _chapterService.get(userId);
+                return Ok(chapters);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
-        // GET api/<ChapterController>/5
+        // Anyone can view a chapter
         [HttpGet("{id}")]
-        public string Get(int id)
+        [AllowAnonymous]
+        public async Task<IActionResult> Get(Guid id)
         {
-            return "value";
+            try
+            {
+                Guid? userId = null;
+
+                var claim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+                if (!string.IsNullOrEmpty(claim))
+                    userId = Guid.Parse(claim);
+
+                var chapter = await _chapterService.getById(id, userId);
+
+                return Ok(chapter);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
-        // POST api/<ChapterController>
+        // Only authenticated users can create
         [HttpPost]
-        public void Post([FromBody] string value)
+        [Authorize]
+        public async Task<IActionResult> Post([FromBody] CreateChapterRequest request)
         {
+            try
+            {
+                var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+                var chapter = await _chapterService.create(
+                    request.Name,
+                    request.IsPrivate,
+                    userId
+                );
+
+                return Ok(chapter);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
-        // PUT api/<ChapterController>/5
+        // Only authenticated users can update
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [Authorize]
+        public async Task<IActionResult> Put(Guid id, [FromBody] UpdateChapterRequest request)
         {
+            try
+            {
+                var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                var chapter = await _chapterService.update(id, request.Name, request.IsPrivate, userId);
+
+                return Ok(chapter);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
-        // DELETE api/<ChapterController>/5
+        // Only authenticated users can delete
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        [Authorize]
+        public async Task<IActionResult> Delete(Guid id)
         {
+            try
+            {
+                var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                var chapter = await _chapterService.delete(id, userId);
+
+                return Ok(chapter);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
     }
 }

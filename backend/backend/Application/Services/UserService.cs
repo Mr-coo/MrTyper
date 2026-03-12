@@ -19,7 +19,7 @@ namespace backend.Application.Services
             _jwtService = jwtService;
         }
 
-        public async Task<User> addUser(CreateUserRequestDto request)
+        public async Task<CommonResponseDto<User>> addUser(CreateUserRequestDto request)
         {
             if(request.username.Length < 3)
             {
@@ -47,7 +47,13 @@ namespace backend.Application.Services
 
             User newUser = new User(request.name, request.username, hashed);
 
-            return await _userRepository.addUser(newUser);
+            User result = await _userRepository.addUser(newUser);
+
+            return new CommonResponseDto<User>()
+            {
+                result = result,
+                message = "Account created successfully"
+            };
         }
 
         public async Task<LoginResponseDto> login(LoginRequestDto request)
@@ -79,7 +85,7 @@ namespace backend.Application.Services
 
             await _userRepository.storeRefreshToken(refreshTokenEntity);
 
-            return new LoginResponseDto(accessToken, refreshToken);
+            return new LoginResponseDto(accessToken, refreshToken, "Login success");
         }
 
         public async Task<LoginResponseDto> addOrLoginWithGithub(string githubId, string githubUsername)
@@ -116,7 +122,7 @@ namespace backend.Application.Services
 
             await _userRepository.storeRefreshToken(refreshTokenEntity);
 
-            return new LoginResponseDto(accessToken, refreshToken);
+            return new LoginResponseDto(accessToken, refreshToken, "Login Success");
         }
     }
 }
