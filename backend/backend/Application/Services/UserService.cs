@@ -107,6 +107,8 @@ namespace backend.Application.Services
                 {
                     githubId = githubId,
                 };
+
+                await _userRepository.addUser(user);
             }
 
             var accessToken = _jwtService.GenerateAccessToken(user);

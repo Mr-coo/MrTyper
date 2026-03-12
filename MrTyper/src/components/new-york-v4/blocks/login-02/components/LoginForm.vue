@@ -21,7 +21,7 @@ const props = defineProps<{
 }>()
 
 async function loginWithGithub(){
-  window.location.href = "https://localhost:32769/api/User/login/github"
+  window.location.href = "https://localhost:32771/api/User/login/github"
 }
 
 async function handleLogin(){

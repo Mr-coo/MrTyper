@@ -1,7 +1,6 @@
 import api from "./api.service"
 
 export const login = async (data: { username: string; password: string }) => {
-  console.log(data);
   const response = await api.post("/User/login", data)
   return response.data
 }

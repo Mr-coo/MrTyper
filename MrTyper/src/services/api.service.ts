@@ -2,7 +2,7 @@ import axios from "axios"
 import { toast } from "vue-sonner"
 
 const api = axios.create({
-  baseURL: "https://localhost:32769/api",
+  baseURL: "https://localhost:32771/api",
   headers: {
     "Content-Type": "application/json"
   }

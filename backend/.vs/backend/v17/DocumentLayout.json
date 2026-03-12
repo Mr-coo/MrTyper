@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\controllers\\chaptercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\controllers\\chaptercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\application\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\application\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\controllers\\chaptercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\controllers\\chaptercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\application\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|solutionrelative:backend\\application\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE0CD2A9-1D32-47C0-B0AD-40D959C6D8CD}|backend\\backend.csproj|c:\\users\\asus\\documents\\personal-project\\mrtyper-fullstack\\backend\\backend\\application\\services\\chapterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,23 +62,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "backend\\Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Services\\UserService.cs",
+              "RelativeToolTip": "backend\\Application\\Services\\UserService.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAiwG4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T05:35:14.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Controllers\\UserController.cs",
               "RelativeToolTip": "backend\\Controllers\\UserController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAowCYAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAIwEMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-12T03:55:33.004Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ChapterService.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Services\\ChapterService.cs",
               "RelativeDocumentMoniker": "backend\\Application\\Services\\ChapterService.cs",
@@ -86,19 +103,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Program.cs",
               "RelativeDocumentMoniker": "backend\\Program.cs",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Program.cs",
               "RelativeToolTip": "backend\\Program.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAxwEkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAzwHUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-12T03:19:11.213Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CommonResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Dtos\\CommonResponseDto.cs",
               "RelativeDocumentMoniker": "backend\\Application\\Dtos\\CommonResponseDto.cs",
@@ -110,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "JwtService.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Services\\JwtService.cs",
               "RelativeDocumentMoniker": "backend\\Application\\Services\\JwtService.cs",
@@ -122,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UpdateChapterRequest.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Dtos\\UpdateChapterRequest.cs",
               "RelativeDocumentMoniker": "backend\\Application\\Dtos\\UpdateChapterRequest.cs",
@@ -134,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CreateChapterRequest.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Application\\Dtos\\CreateChapterRequest.cs",
               "RelativeDocumentMoniker": "backend\\Application\\Dtos\\CreateChapterRequest.cs",
@@ -146,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ChapterController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Controllers\\ChapterController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\ChapterController.cs",
@@ -154,12 +171,11 @@
               "RelativeToolTip": "backend\\Controllers\\ChapterController.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAmwEoAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T02:47:07.616Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-12T02:47:07.616Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "backend\\Infrastructure\\Repositories\\UserRepository.cs",
@@ -171,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ChapterRepository.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Infrastructure\\Repositories\\ChapterRepository.cs",
               "RelativeDocumentMoniker": "backend\\Infrastructure\\Repositories\\ChapterRepository.cs",
@@ -183,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Domain\\Repositories\\IUserRepository.cs",
               "RelativeDocumentMoniker": "backend\\Domain\\Repositories\\IUserRepository.cs",
@@ -195,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IChapterRepository.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Personal-Project\\MrTyper-Fullstack\\backend\\backend\\Domain\\Repositories\\IChapterRepository.cs",
               "RelativeDocumentMoniker": "backend\\Domain\\Repositories\\IChapterRepository.cs",

@@ -71,14 +71,6 @@ builder.Services.AddAuthentication(options =>
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
-.AddCookie()
-.AddGitHub(options =>
-{
-    options.ClientId = builder.Configuration["GitHub:ClientId"];
-    options.ClientSecret = builder.Configuration["GitHub:ClientSecret"];
-    options.CallbackPath = "/signin-github";
-    options.Scope.Add("user:email");
-})
 .AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters
@@ -87,8 +79,10 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
+
         ValidIssuer = builder.Configuration["Jwt:Issuer"],
         ValidAudience = builder.Configuration["Jwt:Audience"],
+
         IssuerSigningKey = new SymmetricSecurityKey(
             Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
     };
@@ -110,6 +104,17 @@ builder.Services.AddAuthentication(options =>
             return Task.CompletedTask;
         }
     };
+})
+.AddCookie()
+.AddGitHub(options =>
+{
+    options.ClientId = builder.Configuration["GitHub:ClientId"];
+    options.ClientSecret = builder.Configuration["GitHub:ClientSecret"];
+
+    options.CallbackPath = "/signin-github";
+    options.Scope.Add("user:email");
+
+    options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 });
 
 builder.Services.AddAuthorization();

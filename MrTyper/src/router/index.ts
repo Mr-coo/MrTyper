@@ -26,6 +26,11 @@ const router = createRouter({
       path: '/register',
       name: 'register',
       component: () => import('../views/RegisterView.vue'),
+    },
+    {
+      path: '/oauth-success',
+      name: 'oauth-success',
+      component: () => import('../views/GithubCallbackView.vue'),
     }
   ],
 })

@@ -3,6 +3,7 @@ using backend.Application.Dtos;
 using backend.Application.Services;
 using backend.Domain.Models;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -57,10 +58,14 @@ namespace backend.Controllers
         [HttpGet("github-callback")]
         public async Task<IActionResult> GitHubCallback()
         {
-            var result = await HttpContext.AuthenticateAsync();
+            var result = await HttpContext.AuthenticateAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme
+            );
 
             if (!result.Succeeded)
-                return Unauthorized();
+            {
+                return BadRequest("GitHub authentication failed");
+            }
 
             var githubId = result.Principal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var username = result.Principal.Identity?.Name;
