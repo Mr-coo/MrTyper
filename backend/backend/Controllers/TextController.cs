@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+﻿using backend.Application.Services;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace backend.Controllers
 {
@@ -8,36 +8,93 @@ namespace backend.Controllers
     [ApiController]
     public class TextController : ControllerBase
     {
-        // GET: api/<TextController>
+        private readonly TextService _service;
+
+        public TextController(TextService service)
+        {
+            _service = service;
+        }
+
+        private Guid? GetUserId()
+        {
+            var claim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return claim == null ? null : Guid.Parse(claim);
+        }
+
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IActionResult> Get()
         {
-            return new string[] { "value1", "value2" };
+            var userId = GetUserId();
+
+            var result = await _service.Get(userId);
+
+            return Ok(result);
         }
 
-        // GET api/<TextController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {
-            return "value";
+            var userId = GetUserId();
+
+            var result = await _service.GetById(id, userId);
+
+            if (result == null)
+                return NotFound();
+
+            return Ok(result);
         }
 
-        // POST api/<TextController>
+        [HttpGet("chapter-id/{id}")]
+        public async Task<IActionResult> GetByChapterId(Guid id)
+        {
+            var userId = GetUserId();
+
+            var result = await _service.GetByChapterId(id, userId);
+
+            if (result == null)
+                return NotFound();
+
+            return Ok(result);
+        }
+
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Create([FromBody] string content, Guid chapterId)
         {
+            var text = await _service.Create(content, chapterId);
+
+            return Ok(text);
         }
 
-        // PUT api/<TextController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> Update(Guid id, [FromBody] string content)
         {
+            var userId = GetUserId();
+
+            if (userId == null)
+                return Unauthorized();
+
+            var success = await _service.Update(id, content, userId.Value);
+
+            if (!success)
+                return Forbid();
+
+            return Ok();
         }
 
-        // DELETE api/<TextController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> Delete(Guid id)
         {
+            var userId = GetUserId();
+
+            if (userId == null)
+                return Unauthorized();
+
+            var success = await _service.Delete(id, userId.Value);
+
+            if (!success)
+                return Forbid();
+
+            return Ok();
         }
     }
 }

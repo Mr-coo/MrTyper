@@ -125,6 +125,9 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<IChapterRepository, ChapterRepository>();
 builder.Services.AddScoped<ChapterService>();
 
+builder.Services.AddScoped<ITextRepository, TextRepository>();
+builder.Services.AddScoped<TextService>();
+
 builder.Services.AddScoped<JwtService>();
 
 var app = builder.Build();
